@@ -92,3 +92,7 @@ ax3.set_xlabel('Subtypes')
 ax3.legend(title='Abnormality')
 # plt.grid(visible=True, color='0.85')
 plt.show()
+
+# Final dataset: Only considering masses
+final_data = clinical_data[clinical_data['abnormality']== 'mass'].reset_index()
+final_data.to_csv('./files/dataset.csv', index = False)
